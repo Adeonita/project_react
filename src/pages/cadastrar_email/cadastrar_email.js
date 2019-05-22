@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-
+import '../../App.css';
+import FromEmail from '../../components/form_email';
 class CadastrarEmail extends Component{
     render(){
         return(
             <div>
                 <h1>
-                    Página Cadastrar Email
+                    Cadastre um novo e-mail
                 </h1>
+                <FromEmail />
             </div>
         );
     }
