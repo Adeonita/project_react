@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
-import Sobre from './sobre/sobre';
+import Sobre from './pages/sobre/sobre';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 ReactDOM.render(
