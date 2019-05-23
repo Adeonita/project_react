@@ -1,0 +1,14 @@
+.CardHome{
+    text-align: center;
+    color: black;
+}
+.CardHome:hover{
+    margin-bottom: 50px;
+}
+a:hover{
+    text-decoration: none;
+}
+
+.sizeIcon{
+    font-size: 40px;
+}
