@@ -5,10 +5,19 @@
 .CardHome:hover{
     margin-bottom: 50px;
 }
+a{
+    color: black;
+}
 a:hover{
     text-decoration: none;
+    color: black;
 }
 
 .sizeIcon{
-    font-size: 40px;
+    font-size: 70px;
 }
+
+.sizeText{
+    font-size: 20px;
+}
+

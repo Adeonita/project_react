@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import {Form, Button} from 'react-bootstrap';
 
 
-class FormDomain extends Component{
+class FormRegister extends Component{
     render(){
         return(
             <div>
                 <Form>
                     <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Insira o domínio</Form.Label>
-                        <Form.Control type="email" placeholder="Insira o domínio" />
+                        <Form.Label>{this.props.titleForm}</Form.Label>
+                        <Form.Control type="email" placeholder={this.props.placeholder} />
                     </Form.Group>
                     <Button variant="primary" type="submit">
-                        Cadastrar
+                        {this.props.textButton}
                     </Button>
                 </Form>
             </div>
@@ -21,4 +21,4 @@ class FormDomain extends Component{
     }
 }
 
-export default FormDomain;
+export default FormRegister;

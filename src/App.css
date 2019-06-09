@@ -32,3 +32,15 @@ h1{
 li{
   margin: 10px;
 }
+
+body{
+  color: black;
+}
+
+.colorNav{
+  background-color: #ffffff;
+}
+
+.menu-principal li a{
+  color: #000000;
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './card_home.css';
+import './CardHome.css';
 import {Card} from 'react-bootstrap';
 
 
@@ -9,9 +9,9 @@ class CardHome extends Component{
         return(
             <div className="CardHome">
                 <Card style={{ width: '18rem' }}>
-                    <Card.Body>
+                    <Card.Body className="sizeIcon">
                         <i className={this.props.nameIcon}></i>
-                        <Card.Text>
+                        <Card.Text className="sizeText">
                             {this.props.description}
                         </Card.Text>
                     </Card.Body>

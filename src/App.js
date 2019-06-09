@@ -2,42 +2,36 @@ import React, { Component } from 'react';
 import './App.css';
 import {Navbar, Nav} from 'react-bootstrap';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
-import Sobre from './pages/sobre/sobre';
-import CadastrarDominio from './pages/cadastrar_dominio/cadastrar_dominio';
+import CadastrarDominio from './pages/cadastrar-dominio/cadastrar-dominio';
 import Home from './pages/home/home';
-import CadastrarEmail from './pages/cadastrar_email/cadastrar_email';
+import CadastrarEmail from './pages/cadastrar-email/cadastrar-email';
 import Estatisticas from './pages/estatisticas/estatisticas';
-import EmailsCorrigidos from './pages/emails_corrigidos/emails_corrigidos';
-
+import EmailsCorrigidos from './pages/emails-corrigidos/emails-corrigidos';
 
 class App extends Component {
   render() {
     return (
       <Router> {/**Define as rotas */}
         <div>
-          <Navbar bg="light" variant="light">
+          <Navbar variant="light" className="colorNav">
             <Navbar.Brand><Link to={'/'}>Navbar</Link></Navbar.Brand>
-            <Nav className="mr-auto">
+            <Nav className="mr-auto menu-principal">
               <li><Link to="/">Home</Link></li> 
-              <li><Link to="/sobre">Sobre</Link></li>
-              <li><Link to="/cadastrar_dominio">Cadastrar Domínio</Link ></li>
-              <li><Link to="/cadastrar_email">Cadastrar Email</Link></li>
-              <li><Link to="/estatisticas"> Estatistica</Link></li>
-              <li><Link to="/emails_corrigidos">Emails Corrigidos</Link></li>
+              <li><Link to="/cadastrar-dominio">Cadastrar Domínio</Link ></li>
+              <li><Link to="/cadastrar-email">Cadastrar Email</Link></li>
+              <li><Link to="/estatisticas"> Estatisticas</Link></li>
+              <li><Link to="/emails-corrigidos">Emails Corrigidos</Link></li>
             </Nav>
           </Navbar>
           <Switch> {/**Exibe o conteúdo na mesma página */}
             <Route exact path={'/'} component={Home}/>
-            <Route exact path='/sobre' component={Sobre}/>
-            <Route exact path='/cadastrar_dominio' component={CadastrarDominio}/>
-            <Route exact path='/cadastrar_email' component={CadastrarEmail}/>
+            <Route exact path='/cadastrar-dominio' component={CadastrarDominio}/>
+            <Route exact path='/cadastrar-email' component={CadastrarEmail}/>
             <Route exact path='/estatisticas' component={Estatisticas}/>
-            <Route exact path='/emails_corrigidos' component={EmailsCorrigidos}/>
+            <Route exact path='/emails-corrigidos' component={EmailsCorrigidos}/>
           </Switch>
          </div>
       </Router>
-      
-      
     );
   }
 }

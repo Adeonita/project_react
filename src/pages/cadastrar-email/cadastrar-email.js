@@ -1,18 +1,18 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import '../../App.css';
-import FormDomain from '../../components/form_domain';
+import FormRegister from '../../components/FormRegister';
 
-class CadastrarDominio extends Component{
+class CadastrarEmail extends Component{
     render(){
         return(
             <div>
                 <h1>
-                    Cadastre um novo domínio
+                    Cadastre um novo e-mail
                 </h1>
                 <div className="container">
                     <div className="row mt-5 justify-content-md-center">
                         <div className="col-md-4">
-                            <FormDomain />
+                            <FormRegister titleForm="Insira seu e-mail" placeholder="nome@dominio.com" textButton="Cadastrar"/>
                         </div>
                     </div>
                 </div>
@@ -21,4 +21,4 @@ class CadastrarDominio extends Component{
     }
 }
 
-export default CadastrarDominio;
+export default CadastrarEmail;
