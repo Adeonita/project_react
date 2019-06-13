@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
-import { Bar, Line, Pie } from 'react-chartjs-2';
+import { Bar, Line, Pie, Doughnut, Radar } from 'react-chartjs-2';
 import './Chart.css';
 
 class Chart extends Component{
 
-    constructor(props){
+    constructor(props){ //Chama o constutor para criar o gráfico
         super(props);
         let bgBorder = this.colorsChart(props.data); //Funcão que pega as cores para o gráfico
-        console.log(bgBorder);
-            this.state = {
+            this.state = { //Dados que compoem o gráfico
                 chartData: {
+                    type: props.type,
                     labels: props.labels,  //Gera os labels do relatório
                     datasets:[
                         {
@@ -18,7 +18,12 @@ class Chart extends Component{
                             backgroundColor: bgBorder.colors,
                             borderColor: bgBorder.borders
                         }
-                    ]
+                    ],
+                    options: {
+                          legend: {
+                              display: true
+                          }
+                        }
                 }
             }
     }
@@ -42,14 +47,23 @@ class Chart extends Component{
     }
 
    render(){
-       return(
-            <div className="chart">
-                <div className="container">
-                    <Bar data={this.state.chartData} options={{ maintainAspectRatio: false }} />
-                </div>
+    const types = {  //Recebe tipos do gráfico
+      Pie: Pie,
+      Bar: Bar,
+      Line: Line,
+      Doughnut: Doughnut,
+      Radar: Radar
+    };
+    const Type = types[this.props.type]; //Type contém tipos
+     return(
+          <div className="chart">
+            <h1>{this.props.titleChart}</h1>
+              <div className="container">
+                  <Type data={this.state.chartData} options={{ maintainAspectRatio: false }} />
+              </div>
 
-            </div>
-       );
+          </div>
+     );
    }
 }
 

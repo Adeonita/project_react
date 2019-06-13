@@ -7,8 +7,8 @@ class CardHome extends Component{
 
     render(){
         return(
-            <div className="CardHome">
-                <Card style={{ width: '18rem' }}>
+            <div >
+                <Card  className="CardHome" style={{backgroundColor: this.props.backgroundColor}}>
                     <Card.Body className="sizeIcon">
                         <i className={this.props.nameIcon}></i>
                         <Card.Text className="sizeText">
@@ -17,7 +17,7 @@ class CardHome extends Component{
                     </Card.Body>
                 </Card>
             </div>
-            
+
         );
     }
 }

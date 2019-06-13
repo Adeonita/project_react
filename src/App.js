@@ -11,16 +11,24 @@ import EmailsCorrigidos from './pages/emails-corrigidos/emails-corrigidos';
 class App extends Component {
   render() {
     return (
-      <Router> {/**Define as rotas */}
+      <Router className="navbar"> {/**Define as rotas */}
         <div>
           <Navbar variant="light" className="colorNav">
-            <Navbar.Brand><Link to={'/'}>Navbar</Link></Navbar.Brand>
+            <Navbar.Brand className="margin-top-navbar"><Link to={'/'}>
+              <img
+                alt=""
+                src="/assets/images/logo.gif"
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+              />
+            </Link></Navbar.Brand>
             <Nav className="mr-auto menu-principal">
-              <li><Link to="/">Home</Link></li> 
-              <li><Link to="/cadastrar-dominio">Cadastrar Domínio</Link ></li>
-              <li><Link to="/cadastrar-email">Cadastrar Email</Link></li>
-              <li><Link to="/estatisticas"> Estatisticas</Link></li>
-              <li><Link to="/emails-corrigidos">Emails Corrigidos</Link></li>
+              <li><Link to="/">HOME</Link></li>
+              <li><Link to="/cadastrar-dominio">CADASTRAR DOMINIO</Link ></li>
+              <li><Link to="/cadastrar-email">CADASTRAR EMAIL</Link></li>
+              <li><Link to="/estatisticas"> ESTATÍSTICAS</Link></li>
+              <li><Link to="/emails-corrigidos">EMAIS CORRIGIDOS</Link></li>
             </Nav>
           </Navbar>
           <Switch> {/**Exibe o conteúdo na mesma página */}

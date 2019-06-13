@@ -1,10 +1,14 @@
 .CardHome{
+    padding-top: 40px;
     text-align: center;
-    color: black;
+    color: #FFFAFA;
+    width:250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-top: 50px;
+    border-color: white;
 }
-.CardHome:hover{
-    margin-bottom: 50px;
-}
+
 a{
     color: black;
 }
@@ -18,6 +22,5 @@ a:hover{
 }
 
 .sizeText{
-    font-size: 20px;
+    font-size: 15px;
 }
-
