@@ -28,7 +28,7 @@ class App extends Component {
               <li><Link to="/cadastrar-dominio">CADASTRAR DOMINIO</Link ></li>
               <li><Link to="/cadastrar-email">CADASTRAR EMAIL</Link></li>
               <li><Link to="/estatisticas"> ESTATÍSTICAS</Link></li>
-              <li><Link to="/emails-corrigidos">EMAIS CORRIGIDOS</Link></li>
+            
             </Nav>
           </Navbar>
           <Switch> {/**Exibe o conteúdo na mesma página */}

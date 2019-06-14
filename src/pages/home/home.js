@@ -46,7 +46,7 @@ class Home extends Component{
                   </h1>
                   <Row className="justify-content-md-center">
                     <Col md={6} className="text-center">
-                      Ainda no input todo os dados são validados, assegurando a qualidade...
+                      Dados validados ainda no input.
                     </Col>
                     <Col md={4}>
                       <Image src="/assets/images/email2.gif" fluid />
